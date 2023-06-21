@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #00925d;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
+  background: #0d0c0f;
+  scroll-behavior: smooth;
+}
+
+.mr {
+  margin-right: 15px;
+}
+
+.mb {
+  margin-bottom: 15px;
+}
+
+.nav-bar {
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0), transparent);
+}
+
+.nav-item {
+  color: white;
+  font-size: 18px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+.btn {
+  font-family: "Rubik", sans-serif;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.primary-btn {
+  background: var(--primary-color);
+  border-radius: 10px 12px;
+  font-size: 16px;
+  padding: 11px;
+  color: white;
+}
+
+.outlined-btn {
+  background: transparent;
+  padding: 9px 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+}
+
+.main-bg {
+  display: inline;
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: -10;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.detail-item {
+  font-size: 14px;
+  color: grey;
+  font-weight: 400;
+}
+
+.sub-title {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.detail-p {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.med-cat-title {
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.cat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 75px;
+  background: #0d0c0f;
+  color: white;
+  border-radius: 15px;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.container {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.container-y {
+  overflow-y: hidden;
+  position: relative;
+}
+
+.scroll-container-y {
+  display: flex;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.scroll-container-y::-webkit-scrollbar {
+  display: none;
+}
+
+.container-y::-webkit-scrollbar {
+  width: 5px;
+  margin-left: 3px;
+}
+
+.container-y::-webkit-scrollbar-track {
+  display: none;
+}
+
+.container-y::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.container-y::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 100  ;
+}
+
+.scroll-button.show {
+  opacity: 1;
+}
+
+.scroll-button.left {
+  left: 10px;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
+
+.sec {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sec::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, rgb(13, 12, 15) 10%, transparent 87%);
+}
+
+.sec::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+  background: linear-gradient(to top, rgb(13, 12, 15) 10%, transparent 87%);
+}
+
+.rank-box {
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 15px;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.movie-release {
+  position: absolute;
+  top: 0;
+  height: 65vh;
+  width: 100%;
+  z-index: -10;
+}
+
+.movie-release {
+  background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(15, 12, 13, 0.7) 55%,
+      rgba(15, 12, 13) 100%
+    ),
+    url(./assests/list-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.detail-bg {
+  object-fit: cover;
+  width: 100%;
+  z-index: -10;
+  height: 90vh;
+}
+
+.detail::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(13, 12, 15, 0.7) 35%,
+    #0d0c0f 85%
+  );
+}
+
+.outlined-btn option {
+  background: black;
+  cursor: pointer;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: grey;
+  background: none;
+  font-family: "Rubik", sans-serif;
+}
+
+
+.container-y {
+  overflow: auto;
+}
