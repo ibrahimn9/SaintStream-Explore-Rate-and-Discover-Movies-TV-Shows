@@ -25,6 +25,7 @@ import { getPopularTvs } from "../services/getPopularTvs";
 import { getTopRatedMovies } from "../services/getTopRatedMovies";
 import { getTopRatedSeries } from "../services/getTopRatedSeries";
 import { fetchUpComing } from "../services/fetchUpComing";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState();
@@ -34,6 +35,8 @@ const Home = () => {
   const [headerTvShows, setHeaderTvShows] = useState();
   const [topRatedMovies, setTopRatedMovies] = useState();
   const [topRatedSeries, setTopRatedSeries] = useState();
+
+  const navigate = useNavigate();
 
   const fetchData = async () => {
     const res1 = await getPopularMovies();
@@ -228,6 +231,7 @@ const Home = () => {
                   justifyContent: "space-between",
                   alignItems: "center",
                 }}
+                onClick={() => navigate(`/detail/movie/${trendingHeader.id}`)}
               >
                 <BsFillPlayCircleFill
                   className="icon"
@@ -445,6 +449,9 @@ const Home = () => {
                       justifyContent: "space-between",
                       alignItems: "center",
                     }}
+                    onClick={() =>
+                      navigate(`/detail/tv/${headerTvShows.id}`)
+                    }
                   >
                     <BsFillPlayCircleFill
                       className="icon"

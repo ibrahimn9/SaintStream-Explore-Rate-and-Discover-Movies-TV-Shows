@@ -211,7 +211,8 @@ const Release = ({ movies }) => {
                         key={index}
                         direction="row"
                         sx={{
-                          width: "500px",
+                          maxWidth: { xs: "300px", md: "600px" },
+                          minWidth: "300px",
                           alignItems: "center",
                           mt: 2,
                           justifyContent: { xs: "center", sm: "start" },
@@ -278,7 +279,8 @@ const Release = ({ movies }) => {
                         key={index}
                         direction="row"
                         sx={{
-                          width: "500px",
+                          maxWidth: { xs: "300px", md: "600px" },
+                          minWidth: "300px",
                           alignItems: "center",
                           mt: 2,
                           justifyContent: { xs: "center", sm: "start" },
